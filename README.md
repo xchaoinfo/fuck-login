@@ -12,4 +12,4 @@ Done
 
 1. [知乎](http://zhihu.com)
 2. [126邮箱](http://126.com)
-3. [手机版新浪微博](http://126.com)
+3. [手机版新浪微博](http://weibo.cn)
