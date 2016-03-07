@@ -21,23 +21,23 @@ import time
 
 
 """
-百度的模拟登录，请确保你的账号浏览器隐身模式下登录不需要验证码
-因为我没有考虑 需要验证码的情况
-这样就能登录成功
-这是一个初级的版本的，以后会对代码整理完善
+1. 百度的模拟登录，请确保你的账号能在浏览器下登录不需要验证码
+ 百度的三次登录错误后，才会出现验证码，但是还有一种情况是百度的账号异常
+
+2. 这是一个初级的版本的，以后会对代码整理完善，并且统一代码风格
+
 几个重要的参数
 
-gid js 代码构造 不需要 http 请求
+-- gid：js 代码构造 不需要 http 请求
 
-token 需要 https://passport.baidu.com/v2/api/? 加上参数
+-- token：需要 https://passport.baidu.com/v2/api/? 加上参数
 但是不能使用 requests 的 params 参数 因为顺序不同的话，访问出问题
 
-pubkey 和 rsakey
-
+-- pubkey 和 rsakey
 需要 http 请求获得
 还有 RSA 的加密 以及 加密后的 base64 字符串化
 
-callback 的 参数是动态变化的
+-- callback 的 参数是动态变化的
 
 post login 时候 还有 ppui_logintime 时间间隔参数
 
@@ -136,7 +136,7 @@ def get_publickey(token):
     publickey_url = publickey_url + str(int(time.time() * 1000)) + "&gid="
     publickey_url = publickey_url + gid + "&callback="
     publickey_url = publickey_url + publickey_callback
-    print(publickey_url)
+    # print(publickey_url)
 
     headers["Referer"] = "https://passport.baidu.com/v2/?login"
     publickey_html = session.get(publickey_url, headers=headers)
@@ -145,7 +145,7 @@ def get_publickey(token):
     return publickey_content_all['pubkey'], publickey_content_all['key']
 
 
-print(get_publickey(token))
+# print(get_publickey(token))
 
 pubkey, key = get_publickey(token)
 
@@ -194,6 +194,13 @@ def login(username, password, key):
     #     f.write(html_index.content)
     #     f.close()
 
+try:
+    input = raw_input
+except:
+    pass
 
 
-login("你的用户名", get_password("你的密码", pubkey), key)
+if __name__ == "__main__":
+    username = input("请输入你的手机号或者邮箱\n >:")
+    secret = input("请输入你的密码\n >:")
+    login(username, get_password(secret, pubkey), key)
