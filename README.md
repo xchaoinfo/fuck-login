@@ -17,10 +17,11 @@
 4. [百度](https://www.baidu.com)
 5. WebQQ by [opdss](https://github.com//opdss) 还有点问题
 6. Webweixin by [opdss](https://github.com//opdss)
+7. [微博网页版](http://weibo.com)
 
 ##Todolist
 
-1. 增加新浪微博网页版的登录
+1. 增加新浪微博网页版的登录 (已解决)
 2. 增加 QQ 空间 和 QQ 邮箱的登录
 3. 重新组织文件结构和代码风格，make it esay to read
 
