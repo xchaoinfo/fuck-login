@@ -18,13 +18,14 @@
 5. WebQQ by [opdss](https://github.com//opdss) 还有点问题
 6. Webweixin by [opdss](https://github.com//opdss)
 7. [微博网页版](http://weibo.com)
+8. lantouzi by [opdss](https://github.com//opdss)
 
 ##Todolist
 
 1. 增加新浪微博网页版的登录 (已解决)
 2. 增加 QQ 空间 和 QQ 邮箱的登录
 3. 重新组织文件结构和代码风格，make it esay to read
-
+4. 增加可扩展性，方便添加新的功能, 现在开发新功能的例子还很不优雅。
 
 ## tips of pull request 
 
@@ -32,6 +33,13 @@
 
 1. 增加新的网站登录
 2. 改进错误, Python版本的兼容
+3. 增加新的功能。一个开发新功能的例子: 
+   <p>   
+   1. xchaoinfo 想开发一个获取知乎某个问题所有回答者的点数
+   2. xchaoinfo 新建一个文件叫做 get_star_by_xchaoinfo.py
+   3. 然后他复制了原来 zhihu.py 文件，然后开发新的功能
+   4. 最后 xchaoinfo 测试好了自己的代码, 然后 pull request
+    </p>
 
 ## something 
 
