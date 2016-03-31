@@ -46,7 +46,6 @@ def get_info():
 			data['authcode'] = get_authcode(acUrl)
 		else:
 			data['authcode'] = ''
-		print (data)
 		return data
 	except Exception as e:
 		print (e)
