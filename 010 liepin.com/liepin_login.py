@@ -31,8 +31,8 @@ class Leipin(object):
                         'Upgrade-Insecure-Requests':'1',
                         }
         self.proxies = {
-                        'HTTP':'120.198.231.88:80',
-                        'HTTP':'222.174.71.46:9999',
+                        'HTTP':'http://120.198.231.88:80',
+                        #'HTTP':'http://222.174.71.46:9999',
                         } # 测试所用代理
         self.session = requests.session()
         self.accountUrl = 'https://passport.liepin.com/h/account'
