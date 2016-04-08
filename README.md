@@ -13,7 +13,7 @@
 
 1. [知乎](http://zhihu.com)
 2. [126邮箱](http://126.com)
-3. [手机版新浪微博](http://weibo.cn)
+3. [手机版新浪微博](http://weibo.cn) (验证码识别困难，建议不要用这种方式) 和 mweibo.cn (http://m.weibo.cn) (推荐使用)
 4. [百度](https://www.baidu.com)
 5. WebQQ by [opdss](https://github.com//opdss) 还有点问题
 6. Webweixin by [opdss](https://github.com//opdss)
