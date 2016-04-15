@@ -10,6 +10,7 @@ Info
 '''
 import requests
 from bs4 import BeautifulSoup
+import time
 
 try:
     input = raw_input
@@ -59,6 +60,7 @@ class JDlogin(object):
             if 'true' in acRequired:
                 print ('need authcode, plz find it and fill in ')
                 acUrl = soup.select('.form img')[0]['src2']
+                acUrl = 'http://{}&yys={}'.format(acUrl,str(int(time.time()*1000)))
                 authcode = self.get_authcode(acUrl)
                 data['authcode'] = authcode
             else:
