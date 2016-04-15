@@ -94,7 +94,7 @@ def login_pre(username):
             im.show()
             im.close()
             cha_code = input("请输入验证码\n>")
-            return cha_code
+            return cha_code, capt_json['data']['pcid']
         else:
             return ""
 
@@ -118,7 +118,8 @@ def login(username, password, pincode):
     if pincode == "":
         pass
     else:
-        postdata["pincode"] = pincode
+        postdata["pincode"] = pincode[0]
+        postdata["pcid"] = pincode[1]
     headers["Host"] = "passport.weibo.cn"
     headers["Reference"] = index_url
     headers["Origin"] = "https://passport.weibo.cn"
