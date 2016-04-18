@@ -9,6 +9,8 @@ Info
 - email  : "xchaoinfo@qq.com"
 - date   : "2016.2.27"
 
+考虑到 weibo.cn 变态的验证码，放弃这种浪费生命的方式吧，
+2016.4.8
 '''
 import requests
 import re
