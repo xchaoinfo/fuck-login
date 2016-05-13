@@ -14,7 +14,10 @@ Update
 - date   : "2016.4.21"
 '''
 import requests
-import cookielib
+try:
+    import cookielib
+except:
+    import http.cookiejar as cookielib
 import re
 import time
 import os.path
