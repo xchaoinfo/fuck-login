@@ -34,7 +34,7 @@
 
 欢迎大家一起来 pull request 
 
-0. **请 pull request 到 fuck-login-dev 分支**
+0. pull request 尽量做到 Py2 和 Py3 版本的兼容。
 1. 增加新的网站登录
 2. 改进错误, Python版本的兼容
 3. 增加新的功能。一个开发新功能的例子: 
