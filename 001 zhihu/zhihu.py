@@ -57,7 +57,7 @@ def get_xsrf():
 # 获取验证码
 def get_captcha():
     t = str(int(time.time()*1000))
-    captcha_url = 'http://www.zhihu.com/captcha.gif?r' + t + "&type=login"
+    captcha_url = 'http://www.zhihu.com/captcha.gif?r=' + t + "&type=login"
     r = session.get(captcha_url, headers=headers)
     with open('captcha.jpg', 'wb') as f:
         f.write(r.content)
