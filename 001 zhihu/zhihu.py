@@ -30,6 +30,8 @@ except:
 # 构造 Request headers
 agent = 'Mozilla/5.0 (Windows NT 5.1; rv:33.0) Gecko/20100101 Firefox/33.0'
 headers = {
+    "Host": "www.zhihu.com",
+    "Referer": "https://www.zhihu.com/",
     'User-Agent': agent
 }
 
@@ -56,7 +58,7 @@ def get_xsrf():
 
 # 获取验证码
 def get_captcha():
-    t = str(int(time.time()*1000))
+    t = str(int(time.time() * 1000))
     captcha_url = 'http://www.zhihu.com/captcha.gif?r=' + t + "&type=login"
     r = session.get(captcha_url, headers=headers)
     with open('captcha.jpg', 'wb') as f:
@@ -77,12 +79,11 @@ def get_captcha():
 def isLogin():
     # 通过查看用户个人信息来判断是否已经登录
     url = "https://www.zhihu.com/settings/profile"
-    login_code = session.get(url,allow_redirects=False).status_code
-    if int(x=login_code) == 200:
+    login_code = session.get(url, headers=headers, allow_redirects=False).status_code
+    if login_code == 200:
         return True
     else:
         return False
-
 
 
 def login(secret, account):
@@ -97,7 +98,11 @@ def login(secret, account):
             'phone_num': account,
         }
     else:
-        print("邮箱登录 \n")
+        if "@" in account:
+            print("邮箱登录 \n")
+        else:
+            print("你的账号输入有问题，请重新登录")
+            return 0
         post_url = 'http://www.zhihu.com/login/email'
         postdata = {
             '_xsrf': get_xsrf(),
