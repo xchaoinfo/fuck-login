@@ -114,7 +114,7 @@ def login(secret, account):
         # 不需要验证码直接登录成功
         login_page = session.post(post_url, data=postdata, headers=headers)
         login_code = login_page.text
-        print(login_page.status)
+        print(login_page.status_code)
         print(login_code)
     except:
         # 需要输入验证码后才能登录成功
