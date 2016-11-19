@@ -90,7 +90,7 @@ def login(secret, account):
     # 通过输入的用户名判断是否是手机号
     if re.match(r"^1\d{10}$", account):
         print("手机号登录 \n")
-        post_url = 'http://www.zhihu.com/login/phone_num'
+        post_url = 'https://www.zhihu.com/login/phone_num'
         postdata = {
             '_xsrf': get_xsrf(),
             'password': secret,
@@ -103,7 +103,7 @@ def login(secret, account):
         else:
             print("你的账号输入有问题，请重新登录")
             return 0
-        post_url = 'http://www.zhihu.com/login/email'
+        post_url = 'https://www.zhihu.com/login/email'
         postdata = {
             '_xsrf': get_xsrf(),
             'password': secret,
