@@ -113,14 +113,14 @@ def login(secret, account):
     try:
         # 不需要验证码直接登录成功
         login_page = session.post(post_url, data=postdata, headers=headers)
-        login_code = login_page.text
+        login_code = login_page.json()
         print(login_page.status_code)
-        print(login_code)
+        print(login_code['msg'])
     except:
         # 需要输入验证码后才能登录成功
         postdata["captcha"] = get_captcha()
         login_page = session.post(post_url, data=postdata, headers=headers)
-        login_code = eval(login_page.text)
+        login_code = login_page.json()
         print(login_code['msg'])
     session.cookies.save()
 
