@@ -28,7 +28,7 @@ except:
 
 
 # 构造 Request headers
-agent = 'Mozilla/5.0 (Windows NT 5.1; rv:33.0) Gecko/20100101 Firefox/33.0'
+agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87'
 headers = {
     "Host": "www.zhihu.com",
     "Referer": "https://www.zhihu.com/",
