@@ -28,7 +28,7 @@ except:
 
 
 # 构造 Request headers
-agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87'
+agent = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
 headers = {
     "Host": "www.zhihu.com",
     "Referer": "https://www.zhihu.com/",
@@ -87,15 +87,17 @@ def isLogin():
 
 
 def login(secret, account):
+    _xsrf = get_xsrf()
+    headers["X-Xsrftoken"] = _xsrf
+    headers["X-Requested-With"] = "XMLHttpRequest"
     # 通过输入的用户名判断是否是手机号
     if re.match(r"^1\d{10}$", account):
         print("手机号登录 \n")
         post_url = 'https://www.zhihu.com/login/phone_num'
         postdata = {
-            '_xsrf': get_xsrf(),
+            '_xsrf': _xsrf,
             'password': secret,
-            'remember_me': 'true',
-            'phone_num': account,
+            'phone_num': account
         }
     else:
         if "@" in account:
@@ -105,23 +107,22 @@ def login(secret, account):
             return 0
         post_url = 'https://www.zhihu.com/login/email'
         postdata = {
-            '_xsrf': get_xsrf(),
+            '_xsrf': _xsrf,
             'password': secret,
-            'remember_me': 'true',
-            'email': account,
+            'email': account
         }
-    try:
-        # 不需要验证码直接登录成功
-        login_page = session.post(post_url, data=postdata, headers=headers)
-        login_code = login_page.json()
-        print(login_page.status_code)
-        print(login_code['msg'])
-    except:
-        # 需要输入验证码后才能登录成功
+    # 不需要验证码直接登录成功
+    login_page = session.post(post_url, data=postdata, headers=headers)
+    login_code = login_page.json()
+    if login_code['r'] == 1:
+        # 不输入验证码登录失败
+        # 使用需要输入验证码的方式登录
         postdata["captcha"] = get_captcha()
         login_page = session.post(post_url, data=postdata, headers=headers)
         login_code = login_page.json()
         print(login_code['msg'])
+    # 保存 cookies 到文件，
+    # 下次可以使用 cookie 直接登录，不需要输入账号和密码
     session.cookies.save()
 
 try:
