@@ -25,6 +25,8 @@
 12. xueqiu.com by xchaoinfo
 13. v2ex.com by [zeekvfu](https://github.com/zeekvfu)
 14. guokr.com by [Zhao Min](https://github.com/zhaozhemin)
+15. blog.CSDN.net by [guoruibiao](https://github.com/guoruibiao)  [博客](http://blog.csdn.net/marksinoberg)
+16. dlut 大连理工大学校园网相关  by [guoruibiao](https://github.com/guoruibiao)  [博客](http://blog.csdn.net/marksinoberg)
 
 ##Todolist
 0. **重构代码，增加可扩展性**
@@ -48,8 +50,8 @@
 <p>
 可以扫一扫下面的二维码关注本人的微信公众号，如果本项目对你有用，欢迎扫一扫二维码对本项目进行捐赠，捐赠时候请留下你的github ID，当然您也可以匿名捐赠。
 </p>
-<img src="http://7xti71.com1.z0.glb.clouddn.com/xchaoinfo.jpg" height="200px" width="200px">
-<img src="http://7xti71.com1.z0.glb.clouddn.com/wechat_pay.png" height="200px" width="150px">
+
+<img src="http://101.200.58.242/edu/videos/payme.png" height="200px" width="150px">
 
 
 ## something to add
