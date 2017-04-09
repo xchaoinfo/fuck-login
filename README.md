@@ -51,7 +51,6 @@
 可以扫一扫下面的二维码关注本人的微信公众号，如果本项目对你有用，欢迎扫一扫二维码对本项目进行捐赠，捐赠时候请留下你的github ID，当然您也可以匿名捐赠。
 </p>
 
-<img src="http://101.200.58.242/edu/videos/payme.png" height="200px" width="150px">
 
 
 ## something to add
