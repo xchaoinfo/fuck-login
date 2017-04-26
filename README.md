@@ -27,6 +27,9 @@
 14. guokr.com by [Zhao Min](https://github.com/zhaozhemin)
 15. blog.CSDN.net by [guoruibiao](https://github.com/guoruibiao)  [博客](http://blog.csdn.net/marksinoberg)
 16. dlut 大连理工大学校园网相关  by [guoruibiao](https://github.com/guoruibiao)  [博客](http://blog.csdn.net/marksinoberg)
+17. attop.com by [justZERO](https://github.com/aloneZERO)
+18. github.com by [wuxiaoxiaoshen](https://github.com/wuxiaoxiaoshen)
+
 
 ## Todolist
 1. **重构代码，增加可扩展性**
@@ -45,11 +48,19 @@
 1. 基于模拟登录增加新的功能。
 
 ## 技术交流
-欢迎加入 QQ 群 465363184 交流学习
-视频教程已经在 微信公众号 xchaoinfo 更新，同时视频已经上传到腾讯视频和优酷视频，可以通过搜索 `Python 模拟登录那些事儿` 找到
-<p>
-可以扫一扫下面的二维码关注本人的微信公众号，如果本项目对你有用，欢迎扫一扫二维码对本项目进行捐赠，捐赠时候请留下你的github ID，当然您也可以匿名捐赠。
-</p>
+
+ - 欢迎加入 QQ 群 465363184 交流学习, 或者发邮件到 xchaoinfo@qq.com 进行交流
+ - 视频教程已经上传到腾讯视频和优酷视频，可以通过搜索 `Python 模拟登录那些事儿` 找到
+ - 视频教程同时也在微信公众号更新了，[点击扫一扫关注我的微信公众号：xchaoinfo](http://7xti71.com1.z0.glb.clouddn.com/xchaoinfo.jpg)
+
+
+## 捐赠
+
+ - [微信捐赠](http://7xti71.com1.z0.glb.clouddn.com/wechat_pay.png)
+ - [支付宝捐赠](http://7xti71.com1.z0.glb.clouddn.com/alipay-xchaoinfo.jpg)
+ - [捐赠记录](https://github.com/xchaoinfo/fuck-login/wiki/fuck-login)
+
+如果本项目对你有用，欢迎对本项目进行捐赠，捐赠时候请留下你的github ID，当然您也可以匿名捐赠。
 
 
 
@@ -63,5 +74,7 @@
 如果网站的登录很有意思，我会在后面的更新中加入
 1. 网站的登录机制有可能经常的变动，所以当现在的模拟的登录的规则不能使用的时候，请在 issue 中提出
 如果时间允许的话，我会更新。
+
+
 
 
