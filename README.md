@@ -58,7 +58,7 @@
 
  - [微信捐赠](http://7xti71.com1.z0.glb.clouddn.com/wechat_pay.png)
  - [支付宝捐赠](http://7xti71.com1.z0.glb.clouddn.com/alipay-xchaoinfo.jpg)
- - [捐赠记录](https://github.com/xchaoinfo/fuck-login/wiki/fuck-login)
+ - [捐赠记录](https://github.com/xchaoinfo/fuck-login/wiki/donation)
 
 如果本项目对你有用，欢迎对本项目进行捐赠，捐赠时候请留下你的github ID，当然您也可以匿名捐赠。
 
