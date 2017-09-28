@@ -30,11 +30,12 @@ url = 'https://accounts.douban.com/login'
 datas = {'source': 'index_nav',
          'remember': 'on'}
 
-headers = {'Referer': 'https://www.douban.com/',
-           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-           ' (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
-           'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-           'Accept-Language': 'zh-CN,zh;q=0.8'}
+headers = {'Host':'www.douban.com',
+           'Referer': 'https://www.douban.com/',
+           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+           'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+           'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+           'Accept-Encoding':'gzip, deflate, br'}
 
 # 尝试使用cookie信息
 session = requests.session()
