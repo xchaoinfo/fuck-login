@@ -62,20 +62,27 @@ def login(username,passwd):
 
 	rsp = session.post(login_url, data=postdata, headers=headers)
 	rsp=rsp.json()
-	print("response code:%d, message:%s"%(rsp['code'],rsp['message']))
-
-	if rsp['message'].find("验证码")>=0 : 
+	print(rsp)
+	#登录成功
+	if rsp.has_key('result') and rsp['result']=="SUCCESS":
 		print(rsp['message'])
-		captcha=get_captcha()
-		postdata={
-			'account': username,
-        	'password': passwd_crypt,
-			'captcha_id': captcha[0],
-			'captcha_token': int(captcha[1])
-		}
-		rsp = session.post(login_url, data=postdata, headers=headers)
-		if str(rsp).find('200'):
-			print("登陆成功！")
+		return 
+
+	#登录失败
+	if rsp.has_key('code') and rsp.has_key('message'):
+		print("response code:%d, message:%s"%(rsp['code'],rsp['message']))
+		if rsp['message'].find("验证码")>=0 : 
+			print(rsp['message'])
+			captcha=get_captcha()
+			postdata={
+				'account': username,
+	        	'password': passwd_crypt,
+				'captcha_id': captcha[0],
+				'captcha_token': int(captcha[1])
+			}
+			rsp = session.post(login_url, data=postdata, headers=headers)
+			if str(rsp).find('200'):
+				print("登陆成功！")
 
 
 if __name__ == '__main__':
