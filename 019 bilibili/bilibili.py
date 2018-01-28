@@ -29,7 +29,7 @@ except:
 try:
     from PIL import Image
 except:
-    exit()
+    pass
     
 session = requests.Session()
 session.headers = {
