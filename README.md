@@ -1,5 +1,10 @@
 # fuck-login
 
+**本项目不在继续维护了(This project is not maintained)**
+
+
+xchaoinfo 2018.06.08
+
 ## 模拟登录一些常见的网站
 
 主要基于以下的 Python 的第三 library 
